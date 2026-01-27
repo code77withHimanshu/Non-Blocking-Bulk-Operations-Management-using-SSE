@@ -1,0 +1,38 @@
+/* Confirm Dialog Styles */
+
+.confirm-dialog {
+  text-align: center;
+}
+
+.confirm-dialog-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  background: #fef2f2;
+  border-radius: 50%;
+}
+
+.confirm-dialog-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.confirm-dialog-message {
+  margin: 0 0 24px;
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.confirm-dialog-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.confirm-dialog-actions .btn {
+  min-width: 100px;
+}

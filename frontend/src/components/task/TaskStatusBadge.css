@@ -1,0 +1,65 @@
+/* Task Status Badge Styles */
+
+.task-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Sizes */
+.badge-small {
+  padding: 2px 8px;
+  font-size: 11px;
+}
+
+.badge-medium {
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.badge-large {
+  padding: 6px 14px;
+  font-size: 13px;
+}
+
+/* Status variants */
+.badge-pending {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.badge-in-progress {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.badge-completed {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.badge-failed {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Spinner for in-progress */
+.badge-spinner {
+  width: 10px;
+  height: 10px;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: badge-spin 0.8s linear infinite;
+}
+
+@keyframes badge-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
