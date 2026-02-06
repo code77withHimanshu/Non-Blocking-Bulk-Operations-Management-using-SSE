@@ -68,7 +68,7 @@
   min-width: 20px;
   height: 20px;
   padding: 0 6px;
-  background: #3b82f6;
+  background: var(--mycom-blue);
   color: white;
   border-radius: 10px;
   font-size: 11px;

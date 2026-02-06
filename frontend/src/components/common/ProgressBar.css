@@ -35,11 +35,11 @@
 
 /* Variants */
 .progress-bar-primary .progress-bar-fill {
-  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  background: linear-gradient(90deg, var(--mycom-blue), var(--mycom-cyan));
 }
 
 .progress-bar-success .progress-bar-fill {
-  background: linear-gradient(90deg, #10b981, #34d399);
+  background: linear-gradient(90deg, var(--mycom-green-dark), var(--mycom-green));
 }
 
 .progress-bar-warning .progress-bar-fill {

@@ -9,6 +9,7 @@
   border: none;
   border-radius: 6px;
   font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -18,7 +19,7 @@
 
 .btn:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 0 3px rgba(0, 97, 127, 0.3);
 }
 
 .btn:disabled {
@@ -28,12 +29,12 @@
 
 /* Variants */
 .btn-primary {
-  background: #3b82f6;
+  background: var(--mycom-blue);
   color: white;
 }
 
 .btn-primary:hover:not(:disabled) {
-  background: #2563eb;
+  background: var(--mycom-dark-blue);
 }
 
 .btn-secondary {
@@ -55,12 +56,12 @@
 }
 
 .btn-success {
-  background: #10b981;
+  background: var(--mycom-green);
   color: white;
 }
 
 .btn-success:hover:not(:disabled) {
-  background: #059669;
+  background: var(--mycom-green-dark);
 }
 
 .btn-outline {
@@ -71,7 +72,7 @@
 
 .btn-outline:hover:not(:disabled) {
   background: #f3f4f6;
-  border-color: #9ca3af;
+  border-color: var(--mycom-grey);
 }
 
 .btn-ghost {

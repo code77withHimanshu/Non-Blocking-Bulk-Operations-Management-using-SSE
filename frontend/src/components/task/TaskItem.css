@@ -18,11 +18,11 @@
 
 /* Status-specific borders */
 .task-item-in_progress {
-  border-left: 3px solid #3b82f6;
+  border-left: 3px solid var(--mycom-blue);
 }
 
 .task-item-completed {
-  border-left: 3px solid #10b981;
+  border-left: 3px solid var(--mycom-green);
 }
 
 .task-item-failed {
@@ -99,7 +99,7 @@
 .task-item-percentage {
   font-size: 12px;
   font-weight: 600;
-  color: #3b82f6;
+  color: var(--mycom-blue);
   min-width: 36px;
   text-align: right;
 }

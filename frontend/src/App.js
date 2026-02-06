@@ -21,16 +21,7 @@ function App() {
         <header className="app-header">
           <div className="app-header-content">
             <div className="app-logo">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <rect width="32" height="32" rx="8" fill="#3b82f6" />
-                <path
-                  d="M8 16h4m4 0h4m4 0h4M12 10v12M20 10v12"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-              <span>NetOps</span>
+              <img src="/mycom-logo.png" alt="Mycom" className="app-logo-img" />
             </div>
             <nav className="app-nav">
               <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} end>Networks</NavLink>

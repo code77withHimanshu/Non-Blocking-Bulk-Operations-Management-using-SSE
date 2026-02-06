@@ -1,3 +1,5 @@
+/* Alerts Styles */
+
 .alerts {
   padding: 24px;
   max-width: 1400px;
@@ -17,7 +19,7 @@
   width: 40px;
   height: 40px;
   border: 3px solid #e5e7eb;
-  border-top-color: #3b82f6;
+  border-top-color: var(--mycom-blue);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -101,7 +103,7 @@
 }
 
 .stat-icon.total {
-  background: #e0e7ff;
+  background: var(--mycom-blue-light);
 }
 
 .stat-icon.active {
@@ -117,7 +119,7 @@
 }
 
 .stat-icon.resolved {
-  background: #d1fae5;
+  background: var(--mycom-green-light);
 }
 
 .stat-content {
@@ -157,12 +159,12 @@
 }
 
 .alerts-tabs .tab:hover {
-  color: #3b82f6;
+  color: var(--mycom-blue);
 }
 
 .alerts-tabs .tab.active {
-  color: #3b82f6;
-  border-bottom-color: #3b82f6;
+  color: var(--mycom-blue);
+  border-bottom-color: var(--mycom-blue);
 }
 
 /* Filters */
@@ -197,8 +199,8 @@
 
 .filter-group select:focus {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  border-color: var(--mycom-blue);
+  box-shadow: 0 0 0 2px rgba(0, 97, 127, 0.2);
 }
 
 /* Alert List */
@@ -219,7 +221,7 @@
 .no-alerts-icon {
   font-size: 48px;
   margin-bottom: 16px;
-  color: #10b981;
+  color: var(--mycom-green);
 }
 
 .no-alerts h3 {
@@ -254,7 +256,7 @@
 }
 
 .alert-card.severity-info {
-  border-left: 4px solid #3b82f6;
+  border-left: 4px solid var(--mycom-blue);
 }
 
 .alert-card.status-resolved {
@@ -318,8 +320,8 @@
 }
 
 .status-badge.resolved {
-  background: #d1fae5;
-  color: #059669;
+  background: var(--mycom-green-light);
+  color: var(--mycom-green-dark);
 }
 
 .category-badge {
@@ -441,7 +443,7 @@
 }
 
 input:checked + .slider {
-  background-color: #10b981;
+  background-color: var(--mycom-green);
 }
 
 input:checked + .slider:before {
@@ -497,7 +499,7 @@ input:disabled + .slider {
 }
 
 .severity-value.info {
-  color: #3b82f6;
+  color: var(--mycom-blue);
 }
 
 /* Alert Detail Modal */

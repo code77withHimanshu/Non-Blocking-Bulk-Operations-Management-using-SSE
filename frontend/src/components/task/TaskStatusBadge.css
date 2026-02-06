@@ -34,13 +34,13 @@
 }
 
 .badge-in-progress {
-  background: #dbeafe;
-  color: #1d4ed8;
+  background: var(--mycom-blue-light);
+  color: var(--mycom-dark-blue);
 }
 
 .badge-completed {
-  background: #d1fae5;
-  color: #047857;
+  background: var(--mycom-green-light);
+  color: var(--mycom-green-dark);
 }
 
 .badge-failed {

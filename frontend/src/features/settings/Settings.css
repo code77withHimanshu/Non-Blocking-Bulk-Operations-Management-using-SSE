@@ -1,3 +1,5 @@
+/* Settings Styles */
+
 .settings {
   padding: 24px;
   max-width: 1400px;
@@ -17,7 +19,7 @@
   width: 40px;
   height: 40px;
   border: 3px solid #e5e7eb;
-  border-top-color: #3b82f6;
+  border-top-color: var(--mycom-blue);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -80,8 +82,8 @@
 }
 
 .save-status.success {
-  background: #d1fae5;
-  color: #059669;
+  background: var(--mycom-green-light);
+  color: var(--mycom-green-dark);
 }
 
 .save-status.error {
@@ -133,8 +135,8 @@
 }
 
 .nav-item.active {
-  background: #eff6ff;
-  color: #3b82f6;
+  background: var(--mycom-blue-light);
+  color: var(--mycom-blue);
 }
 
 .nav-icon {
@@ -207,8 +209,8 @@
 .form-group input:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  border-color: var(--mycom-blue);
+  box-shadow: 0 0 0 3px rgba(0, 97, 127, 0.15);
 }
 
 .form-row {
@@ -306,7 +308,7 @@
 }
 
 input:checked + .slider {
-  background-color: #10b981;
+  background-color: var(--mycom-green);
 }
 
 input:checked + .slider:before {
@@ -380,7 +382,7 @@ input:checked + .slider:before {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, var(--mycom-magenta) 0%, var(--mycom-blue) 100%);
   color: white;
   display: flex;
   align-items: center;
@@ -418,8 +420,8 @@ input:checked + .slider:before {
 }
 
 .role-badge.operator {
-  background: #dbeafe;
-  color: #2563eb;
+  background: var(--mycom-blue-light);
+  color: var(--mycom-blue);
 }
 
 .role-badge.viewer {
@@ -451,8 +453,8 @@ input:checked + .slider:before {
 }
 
 .user-status.active {
-  background: #d1fae5;
-  color: #059669;
+  background: var(--mycom-green-light);
+  color: var(--mycom-green-dark);
 }
 
 .user-status.inactive {
@@ -507,8 +509,8 @@ input:checked + .slider:before {
   border-radius: 12px;
   font-size: 11px;
   font-weight: 500;
-  background: #e0e7ff;
-  color: #4338ca;
+  background: var(--mycom-blue-light);
+  color: var(--mycom-blue);
   text-transform: capitalize;
 }
 
@@ -595,8 +597,8 @@ input:checked + .slider:before {
 .new-key-success .success-icon {
   width: 56px;
   height: 56px;
-  background: #d1fae5;
-  color: #059669;
+  background: var(--mycom-green-light);
+  color: var(--mycom-green-dark);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -619,14 +621,14 @@ input:checked + .slider:before {
 }
 
 .key-display {
-  background: #1f2937;
+  background: var(--mycom-dark-blue);
   padding: 16px;
   border-radius: 8px;
   margin-bottom: 20px;
 }
 
 .key-display code {
-  color: #10b981;
+  color: var(--mycom-green);
   font-size: 13px;
   word-break: break-all;
 }

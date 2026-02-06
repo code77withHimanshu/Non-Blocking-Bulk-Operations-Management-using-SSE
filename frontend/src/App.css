@@ -1,4 +1,28 @@
-/* Global Application Styles */
+/* Global Application Styles - Mycom Brand */
+
+/* Mycom Brand Colour Palette */
+:root {
+  /* Primary Colours */
+  --mycom-blue: #00617F;
+  --mycom-green: #84BD00;
+  --mycom-magenta: #A51890;
+  --mycom-black: #000000;
+
+  /* Secondary Colours */
+  --mycom-cyan: #00B8FC;
+  --mycom-teal: #56D5D8;
+  --mycom-violet: #5961F4;
+  --mycom-mid-blue: #002DBE;
+  --mycom-fuchsia: #D70BC1;
+  --mycom-grey: #C1C6C8;
+  --mycom-dark-blue: #00313C;
+
+  /* Derived tints */
+  --mycom-blue-light: #e6eff2;
+  --mycom-blue-lighter: #f0f6f8;
+  --mycom-green-light: #f0f7e0;
+  --mycom-green-dark: #6B9A00;
+}
 
 /* Reset and base styles */
 *,
@@ -9,7 +33,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: #111827;
@@ -32,6 +56,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(90deg, var(--mycom-magenta), var(--mycom-blue), var(--mycom-green)) 1;
 }
 
 .app-header-content {
@@ -47,15 +73,14 @@ body {
 .app-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 20px;
-  font-weight: 700;
-  color: #111827;
   text-decoration: none;
 }
 
-.app-logo svg {
-  flex-shrink: 0;
+.app-logo-img {
+  height: 36px;
+  min-width: 110px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* Navigation */
@@ -76,13 +101,13 @@ body {
 }
 
 .nav-link:hover {
-  color: #374151;
-  background: #f3f4f6;
+  color: var(--mycom-dark-blue);
+  background: var(--mycom-blue-lighter);
 }
 
 .nav-link.active {
-  color: #3b82f6;
-  background: #eff6ff;
+  color: var(--mycom-blue);
+  background: var(--mycom-blue-light);
 }
 
 /* Main content */
@@ -116,7 +141,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: var(--mycom-grey);
   border-radius: 4px;
 }
 
@@ -126,19 +151,19 @@ body {
 
 /* Focus styles */
 :focus-visible {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid var(--mycom-blue);
   outline-offset: 2px;
 }
 
 /* Selection */
 ::selection {
-  background: #bfdbfe;
-  color: #1e3a8a;
+  background: var(--mycom-blue-light);
+  color: var(--mycom-dark-blue);
 }
 
 /* Link styles */
 a {
-  color: #3b82f6;
+  color: var(--mycom-blue);
   text-decoration: none;
 }
 

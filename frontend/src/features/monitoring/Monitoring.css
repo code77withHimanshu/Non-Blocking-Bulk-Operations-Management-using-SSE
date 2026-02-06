@@ -1,3 +1,5 @@
+/* Monitoring Styles */
+
 .monitoring {
   padding: 24px;
   max-width: 1400px;
@@ -17,7 +19,7 @@
   width: 40px;
   height: 40px;
   border: 3px solid #e5e7eb;
-  border-top-color: #3b82f6;
+  border-top-color: var(--mycom-blue);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -132,8 +134,8 @@
 }
 
 .summary-icon.healthy {
-  background: #d1fae5;
-  color: #10b981;
+  background: var(--mycom-green-light);
+  color: var(--mycom-green-dark);
 }
 
 .summary-icon.warning {
@@ -147,8 +149,8 @@
 }
 
 .summary-icon.nodes {
-  background: #e0e7ff;
-  color: #6366f1;
+  background: var(--mycom-blue-light);
+  color: var(--mycom-violet);
 }
 
 .summary-content {
@@ -188,12 +190,12 @@
 }
 
 .monitoring-tabs .tab:hover {
-  color: #3b82f6;
+  color: var(--mycom-blue);
 }
 
 .monitoring-tabs .tab.active {
-  color: #3b82f6;
-  border-bottom-color: #3b82f6;
+  color: var(--mycom-blue);
+  border-bottom-color: var(--mycom-blue);
 }
 
 /* Network Health Grid */
@@ -246,8 +248,8 @@
 }
 
 .health-badge.status-healthy {
-  background: #d1fae5;
-  color: #059669;
+  background: var(--mycom-green-light);
+  color: var(--mycom-green-dark);
 }
 
 .health-badge.status-warning {
@@ -298,7 +300,7 @@
 }
 
 .score-circle .score-fill.status-healthy {
-  stroke: #10b981;
+  stroke: var(--mycom-green);
 }
 
 .score-circle .score-fill.status-warning {
@@ -379,7 +381,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f3f4f6;
+  background: var(--mycom-blue-light);
   border-radius: 10px;
 }
 
@@ -411,8 +413,8 @@
 
 .metric-status.status-healthy,
 .metric-status.status-normal {
-  background: #d1fae5;
-  color: #059669;
+  background: var(--mycom-green-light);
+  color: var(--mycom-green-dark);
 }
 
 .metric-status.status-warning {
@@ -454,7 +456,7 @@
 }
 
 .metric-trend.down {
-  color: #10b981;
+  color: var(--mycom-green);
 }
 
 .metric-trend.stable {

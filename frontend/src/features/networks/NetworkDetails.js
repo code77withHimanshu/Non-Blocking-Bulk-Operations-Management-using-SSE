@@ -64,13 +64,20 @@ export function NetworkDetails() {
     fetchNetwork();
   }, [fetchNetwork]);
 
-  // Listen for task completion and refresh data
+  // Listen for task completion and update state directly
   useEffect(() => {
     networkTaskIds.current.forEach((taskId) => {
       const task = tasks[taskId];
-      if (task && (task.status === TaskStatus.COMPLETED || task.status === TaskStatus.FAILED)) {
+      if (!task) return;
+
+      if (task.status === TaskStatus.COMPLETED) {
         networkTaskIds.current.delete(taskId);
         setIsPending(false);
+        // Keep the optimistic data — it already reflects the changes
+      } else if (task.status === TaskStatus.FAILED) {
+        networkTaskIds.current.delete(taskId);
+        setIsPending(false);
+        // Revert: fetch original data from backend/mock store
         fetchNetwork();
       }
     });

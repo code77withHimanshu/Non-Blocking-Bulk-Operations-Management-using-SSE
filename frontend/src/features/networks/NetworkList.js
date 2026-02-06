@@ -60,25 +60,56 @@ export function NetworkList() {
     fetchNetworks();
   }, [fetchNetworks]);
 
-  // Listen for task completion and refresh data
+  // Listen for task completion and update state directly
   useEffect(() => {
     networkTaskIds.current.forEach((taskId) => {
       const task = tasks[taskId];
-      if (task && (task.status === TaskStatus.COMPLETED || task.status === TaskStatus.FAILED)) {
-        // Task completed - remove from tracking and refresh
-        networkTaskIds.current.delete(taskId);
+      if (!task) return;
 
-        // Clear pending status for the network
-        if (task.metadata?.networkId) {
+      if (task.status === TaskStatus.COMPLETED) {
+        networkTaskIds.current.delete(taskId);
+        const networkId = task.metadata?.networkId;
+
+        // Clear pending status
+        if (networkId) {
           setPendingNetworks(prev => {
             const next = new Set(prev);
-            next.delete(task.metadata.networkId);
+            next.delete(networkId);
             return next;
           });
         }
 
-        // Refresh network list to get updated data
-        fetchNetworks();
+        if (task.type === 'DELETE_NETWORK' && networkId) {
+          // Remove the deleted network from local state
+          setNetworks(prev => prev.filter(n => n.id !== networkId));
+        } else {
+          // CREATE or UPDATE — clear _pending flag, keep optimistic data
+          setNetworks(prev =>
+            prev.map(n =>
+              n.id === networkId ? { ...n, _pending: false } : n
+            )
+          );
+        }
+      } else if (task.status === TaskStatus.FAILED) {
+        networkTaskIds.current.delete(taskId);
+        const networkId = task.metadata?.networkId;
+
+        // Clear pending status
+        if (networkId) {
+          setPendingNetworks(prev => {
+            const next = new Set(prev);
+            next.delete(networkId);
+            return next;
+          });
+        }
+
+        if (task.type === 'CREATE_NETWORK' && networkId) {
+          // Revert: remove the optimistic network that was never actually created
+          setNetworks(prev => prev.filter(n => n.id !== networkId));
+        } else {
+          // UPDATE or DELETE failed — refetch to get the true state
+          fetchNetworks();
+        }
       }
     });
   }, [tasks, fetchNetworks]);
